@@ -277,3 +277,21 @@ info = lapply(1:length(fl), function(i) {
   print(paste('WROTE: ', file.path("./Aggregated_Data/", fnl[i])))
 })
 
+########################################
+# Make tdif files for tav, tmn tmx
+########################################
+# tdif wil arbitrarily be the ground level minus the two meter
+
+## tav
+d.tav = g.tav - m.tav
+d.tmn = g.tmn - m.tmn
+d.tmx = g.tmx - m.tmx
+
+files_names = c('d-tav', 'd-tmn', 'd-tmx')
+file_names = paste0(file_names, '.csv')
+d_list = list(d.tav, d.tmn, d.tmx)
+
+lapply(1:length(d_list), function(i){
+  write.csv(d_list[[i]], file=file.path('./Aggregated_Data/', file_names[i]), row.names=FALSE)
+  print(paste('WROTE: ', file.path('./Aggregated_Data/', file_names[i])))
+})
