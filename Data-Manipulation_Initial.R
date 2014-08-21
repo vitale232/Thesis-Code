@@ -283,9 +283,24 @@ info = lapply(1:length(fl), function(i) {
 # tdif wil arbitrarily be the ground level minus the two meter
 
 ## tav
-d.tav = g.tav - m.tav
-d.tmn = g.tmn - m.tmn
-d.tmx = g.tmx - m.tmx
+d.tav = data.frame(m.tav$date)
+d.tmx = data.frame(m.tav$date)
+d.tmn = data.frame(m.tav$date)
+
+g.tav = data.frame(g.tav)
+g.tmx = data.frame(g.tmx)
+g.tmn = data.frame(g.tmn)
+
+m.tav = data.frame(m.tav)
+m.tmx = data.frame(m.tmx)
+m.tmn = data.frame(m.tmn)
+
+d.tav = cbind(d.tav, g.tav[ , -1] - m.tav[ , -1])
+d.tmn = cbind(d.tmn, g.tmn[ , -1] - m.tmn[ , -1])
+d.tmx = cbind(d.tmx, g.tmx[ , -1] - m.tmx[ , -1])
+
+
+
 
 file_names = c('d-tav', 'd-tmn', 'd-tmx')
 file_names = paste0(file_names, '.csv')
