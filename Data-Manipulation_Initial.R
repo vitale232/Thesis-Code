@@ -287,7 +287,7 @@ d.tav = g.tav - m.tav
 d.tmn = g.tmn - m.tmn
 d.tmx = g.tmx - m.tmx
 
-files_names = c('d-tav', 'd-tmn', 'd-tmx')
+file_names = c('d-tav', 'd-tmn', 'd-tmx')
 file_names = paste0(file_names, '.csv')
 d_list = list(d.tav, d.tmn, d.tmx)
 
