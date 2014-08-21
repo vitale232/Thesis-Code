@@ -277,3 +277,36 @@ info = lapply(1:length(fl), function(i) {
   print(paste('WROTE: ', file.path("./Aggregated_Data/", fnl[i])))
 })
 
+########################################
+# Make tdif files for tav, tmn tmx
+########################################
+# tdif wil arbitrarily be the ground level minus the two meter
+
+## tav
+d.tav = data.frame(m.tav$date)
+d.tmx = data.frame(m.tav$date)
+d.tmn = data.frame(m.tav$date)
+
+g.tav = data.frame(g.tav)
+g.tmx = data.frame(g.tmx)
+g.tmn = data.frame(g.tmn)
+
+m.tav = data.frame(m.tav)
+m.tmx = data.frame(m.tmx)
+m.tmn = data.frame(m.tmn)
+
+d.tav = cbind(d.tav, g.tav[ , -1] - m.tav[ , -1])
+d.tmn = cbind(d.tmn, g.tmn[ , -1] - m.tmn[ , -1])
+d.tmx = cbind(d.tmx, g.tmx[ , -1] - m.tmx[ , -1])
+
+
+
+
+file_names = c('d-tav', 'd-tmn', 'd-tmx')
+file_names = paste0(file_names, '.csv')
+d_list = list(d.tav, d.tmn, d.tmx)
+
+lapply(1:length(d_list), function(i){
+  write.csv(d_list[[i]], file=file.path('./Aggregated_Data/', file_names[i]), row.names=FALSE)
+  print(paste('WROTE: ', file.path('./Aggregated_Data/', file_names[i])))
+})
