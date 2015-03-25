@@ -1,0 +1,21 @@
+r.in.gdal input=/home/vitale232/Google\ Drive/UNR/UNR-Thesis/Data/GIS-Data/DEM/merged_UTM11.tif output=dem
+
+g.region rast=dem -p
+
+r.horizon elevin=dem horizonstep=30 bufferzone=200 horizon=horangle dist=0.7 maxdistance=2000
+
+r.slope.aspect elevation=dem aspect=aspect.dem slope=slope.dem
+
+while read D
+do
+	echo starting day $D
+	r.sun -s --verbose dem horizon=horangle horizonstep=30 aspin=aspect.dem slopein=slope.dem glob_rad=global_rad_$D day=$D
+	r.out.gdal input=global_rad_$D output=/home/vitale232/Google Drive/UNR/UNR-Thesis/Data/GIS-Data/Irradiance/global_rad_$D.tif
+	echo wrote irrad_$D
+	g.remove rast=global_rad_$D
+	echo removed global_rad_$D
+done < /home/vitale232/Google\ Drive/UNR/UNR-Thesis/Data/GIS-Data/Irradiance/days.txt
+
+python /home/vitale232/Google\ Drive/UNR/UNR-Thesis/Data/GIS-Data/Irradiance/rename_irradiance.py
+#### The text file is a list of days for which the equation should calculate solar irradiance
+
