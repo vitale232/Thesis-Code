@@ -5,7 +5,7 @@ library(rgdal)
 contours = TRUE
 equidistant_projection = TRUE
 save_as_png = TRUE
-png_filename = '~/Google Drive/UNR/UNR-Thesis/Figures/equi-dist_SOM.png'
+png_filename = '~/Dropbox/UNR/UNR-Thesis/Figures/equi-dist_SOM.png'
 
 
 if(save_as_png){
@@ -22,9 +22,9 @@ cols <-  colorRampPalette(c('darkblue', 'blue', 'white', 'red', 'darkred'))
 ticks <- seq(-34, 34, by = 2)
 z = c(-34, 34)
 
-states = readOGR(dsn='/home/vitale232/Google Drive/UNR/UNR-Thesis/Data/GIS-Data/states_21basic',
+states = readOGR(dsn='/home/vitale232/Dropbox/UNR/UNR-Thesis/Data/GIS-Data/states_21basic',
                  layer='states')
-canada = readOGR(dsn='/home/vitale232/Google Drive/UNR/UNR-Thesis/Data/GIS-Data/Canada',
+canada = readOGR(dsn='/home/vitale232/Dropbox/UNR/UNR-Thesis/Data/GIS-Data/Canada',
                  layer='Canada')
 
 states = spTransform(states, CRS(projection(codes)))

@@ -159,6 +159,6 @@ def plot_daily(daily_nevcan, figureOut):
     plt.show() # show the figure
 
 if __name__ == '__main__':
-    main(filenameIn='/home/vitale232/Google Drive/UNR/UNR-Thesis/Data/Validation/validation_nevcan-raw.csv',
-        filenameOut='/home/vitale232/Google Drive/UNR/UNR-Thesis/Data/Validation/validation_nevcan-daily_two.csv',
+    main(filenameIn='/home/vitale232/Dropbox/UNR/UNR-Thesis/Data/Validation/validation_nevcan-raw.csv',
+        filenameOut='/home/vitale232/Dropbox/UNR/UNR-Thesis/Data/Validation/validation_nevcan-daily_two.csv',
         plot=True, figureOut='/home/vitale232/Desktop/validation_plot.png')

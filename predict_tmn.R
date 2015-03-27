@@ -48,7 +48,7 @@ temp = raster('./GIS-Data/NLCD/nlcd_utm.tif')
 elev = crop(raster('./GIS-Data/DEM/merged_UTM11.tif'), temp)/1000
 tci = crop(raster('./GIS-Data/DEM/TCI_Whole-Range_UTM.tif'), temp)
 tri = crop(terrain(elev, opt='TRI'), temp)
-gis.slope = crop(terrain(elev, opt='slope', unit='degrees'), temp)
+gis.slope = crop(terrain(elev*1000, opt='slope', unit='degrees'), temp)
 cc_nlcd = resample(temp, tri)
 irrad = stack('./GIS-Data/Irradiance/irrad_stack.grd')
 ## Resampled irrad and now load it from disk

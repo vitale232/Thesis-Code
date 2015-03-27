@@ -18,7 +18,7 @@ library(spacetime)
 library(devtools)
 library(xts)
 
-setwd('~/Google Drive/UNR/UNR-Thesis/Data/')
+setwd('~/Dropbox/UNR/UNR-Thesis/Data/')
 
 #### Set up the extent I want to work in
 e = extent(-180, -75, 15, 90)
@@ -85,11 +85,11 @@ teof = data.frame('date'=as.Date(row.names(peof)),
 # PCs = apply(seof_scale$rotation, 2, function(x) (x - mean(x)) / sd(x))
 # EOFs = stack(seof_preds_scale)
 
-# save.image('~/Google Drive/UNR/UNR-Thesis/Data/Modeling_R-Images/2014-10-30_EOF-scaled.RData')
+# save.image('~/Dropbox/UNR/UNR-Thesis/Data/Modeling_R-Images/2014-10-30_EOF-scaled.RData')
 
-load('/home/vitale232/Google Drive/UNR/UNR-Thesis/Data/Modeling_R-Images/2014-10-30_EOF-scaled.RData')
+load('/home/vitale232/Dropbox/UNR/UNR-Thesis/Data/Modeling_R-Images/2014-10-30_EOF-scaled.RData')
 
-source('~/Google Drive/UNR/UNR-Thesis/Data/Thesis-Code/load_and_melt.R')
+source('~/Dropbox/UNR/UNR-Thesis/Data/Thesis-Code/load_and_melt.R')
 vars = eof_summ$sdev^2
 vars = vars/sum(vars)
 write.csv(rbind('Stand. Dev.' = eof_summ$sdev, 'Prop. Var.' = vars, 'Cum. Prop.' = cumsum(vars)),
@@ -111,7 +111,7 @@ dat$date = as.Date(dat$date)
 df = merge(df, dat)
 
 x11(height=10.25, width=20)
-# png('~/Google Drive/UNR/UNR-Thesis/Figures/EOF_PC-ts.png',
+# png('~/Dropbox/UNR/UNR-Thesis/Figures/EOF_PC-ts.png',
 #     height=10.25, width=20, units='in', res=300)
 colors = c('red', 'orange', 'green', 'blue', 'violet')
 par(mfrow=c(4,1), mar=c(2, 4, 1, 2) + 0.1)
@@ -127,16 +127,16 @@ for(i in 2:5){
 }
 # dev.off()
 
-states = readOGR(dsn='/home/vitale232/Google Drive/UNR/UNR-Thesis/Data/GIS-Data/states_21basic',
+states = readOGR(dsn='/home/vitale232/Dropbox/UNR/UNR-Thesis/Data/GIS-Data/states_21basic',
                  layer='states')
-canada = readOGR(dsn='/home/vitale232/Google Drive/UNR/UNR-Thesis/Data/GIS-Data/Canada',
+canada = readOGR(dsn='/home/vitale232/Dropbox/UNR/UNR-Thesis/Data/GIS-Data/Canada',
                  layer='Canada')
 
 states = spTransform(states, CRS(projection(EOFs)))
 canada = spTransform(canada, CRS(projection(EOFs)))
 
 x11(height=9.9, width=10)
-# png(filename='~/Google Drive/UNR/UNR-Thesis/Figures/EOF_R-eof-4.png',
+# png(filename='~/Dropbox/UNR/UNR-Thesis/Figures/EOF_R-eof-4.png',
 #     height=10, width=10.5, res=300, units='in')
 colors = colorRampPalette(c('darkblue', 'blue', 'white', 'red', 'darkred'))
 par(mfrow=c(2,2), mar= c(5, 2, 4, 6) + 0.1)
@@ -153,7 +153,7 @@ d2 = seq(as.Date('2013-06-17'), as.Date('2014-06-24'),
 w2 = which(getZ(anoms) %in% d2)
 
 x11(height=10.25, width=20)
-# png('~/Google Drive/UNR/UNR-Thesis/Figures/EOF_PC-ts-mine-1.png',
+# png('~/Dropbox/UNR/UNR-Thesis/Figures/EOF_PC-ts-mine-1.png',
 #     height=10.25, width=20, units='in', res=300)
 par(mfrow=c(4,1), mar=c(2, 4, 1, 2) + 0.1)
 for(i in 1:4){
@@ -172,7 +172,7 @@ df$PC6 = PCs[w,'PC6']
 
 write.csv(df, './Reanalysis/EOF_PCs-time-series.csv', row.names=FALSE)
 
-# png('~/Google Drive/UNR/UNR-Thesis/Figures/EOF_tmn-lapse.png', height=7, width=14, units='in', res=300)
+# png('~/Dropbox/UNR/UNR-Thesis/Figures/EOF_tmn-lapse.png', height=7, width=14, units='in', res=300)
 colors = c('red', 'orange', 'green', 'blue', 'violet')
 plot(df$date, df$PC4, type='l', xlab='Date', ylab='PC4', main='Tmn lapse rates (°C/km) and PC4')
 points(df$date, df$PC4, pch=1, col=colors[df$cols])
@@ -182,7 +182,7 @@ legend('topleft', pch=1, col=colors[1:length(unique(df$cols))],
 # dev.off()
 
 setEPS(height=7, width=12)
-postscript('~/Google Drive/UNR/UNR-Thesis/Figures/lapse-rates_tmn-PC4.eps')
+postscript('~/Dropbox/UNR/UNR-Thesis/Figures/lapse-rates_tmn-PC4.eps')
 start = as.Date('2013-06-17')
 end = as.Date('2014-06-24')
 colors = c('red', 'orange', 'green', 'blue', 'violet')
@@ -198,7 +198,7 @@ dev.off()
 
 
 setEPS(height=7, width=12)
-postscript('~/Google Drive/UNR/UNR-Thesis/Figures/lapse-rates_tmx-PC4.eps')
+postscript('~/Dropbox/UNR/UNR-Thesis/Figures/lapse-rates_tmx-PC4.eps')
 with(df[df$date >= start & df$date <= end, ], {
   plot(date, PC4, type='l', ylim=c(-170, 170),
        main='Tmx lapse rates (°C/kim) and PC4')

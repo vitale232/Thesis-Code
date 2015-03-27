@@ -17,7 +17,7 @@ library(lme4)
 library(ggplot2)
 library(reshape2)
 
-setwd('~/Google Drive/UNR/UNR-Thesis/Data/')
+setwd('~/Dropbox/UNR/UNR-Thesis/Data/')
 
 then_again = Sys.time() # now it's then again, not now
 predict = FALSE
@@ -27,7 +27,7 @@ merge_them = TRUE
 load_som = TRUE
 load_ra = TRUE
 load_eof = TRUE
-source('~/Google Drive/UNR/UNR-Thesis/Data/Thesis-Code/load_and_melt.R')
+source('~/Dropbox/UNR/UNR-Thesis/Data/Thesis-Code/load_and_melt.R')
 
 m_tmn$jday = as.numeric(format(m_tmn$date, '%j'))
 m_tmn$jday_cos = cos(2*pi/365 * m_tmn$jday)
@@ -163,5 +163,5 @@ write.csv(error_df_out,
 #   theme(axis.text.x=element_text(color='black'),
 #         axis.text.y=element_text(color='black'))
 # print(histsTmn)
-# ggsave('~/Google Drive/UNR/UNR-Thesis/Figures/bias_tmn-leave_one_out.pdf',
+# ggsave('~/Dropbox/UNR/UNR-Thesis/Figures/bias_tmn-leave_one_out.pdf',
 #        width=10, height=7)

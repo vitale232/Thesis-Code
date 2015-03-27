@@ -10,7 +10,7 @@ while read D
 do
 	echo starting day $D
 	r.sun -s --verbose dem horizon=horangle horizonstep=30 aspin=aspect.dem slopein=slope.dem glob_rad=global_rad_$D day=$D
-	r.out.gdal input=global_rad_$D output=/home/vitale232/Google Drive/UNR/UNR-Thesis/Data/GIS-Data/Irradiance/global_rad_$D.tif
+	r.out.gdal input=global_rad_$D output=/home/vitale232/Dropbox/UNR/UNR-Thesis/Data/GIS-Data/Irradiance/global_rad_$D.tif
 	echo wrote irrad_$D
 	g.remove rast=global_rad_$D
 	echo removed global_rad_$D

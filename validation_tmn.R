@@ -8,7 +8,7 @@
 
 library(raster)
 
-setwd('~/Google Drive/UNR/UNR-Thesis/Data/')
+setwd('~/Dropbox/UNR/UNR-Thesis/Data/')
 
 #### Define functions
 mae = function(preds, obs, ...){
@@ -45,7 +45,7 @@ proj4string(stations) = CRS('+proj=longlat +datum=WGS84 +ellps=WGS84 +towgs84=0,
 stations = spTransform(stations, CRS(projection(tmn_stack)))
 
 #### Read in the road shapefile for mapping
-roads = readOGR(dsn='/home/vitale232/Google Drive/UNR/UNR-Thesis/SiteMap', layer='DirtRoads')
+roads = readOGR(dsn='/home/vitale232/Dropbox/UNR/UNR-Thesis/SiteMap', layer='DirtRoads')
 
 #### Extract the predicted Tmn values
 preds = extract(tmn_stack, stations)
@@ -222,7 +222,7 @@ write.csv(tmn_rmse_out, './Tables/Tmn/RMSE_by-site_by-month.csv')
 #        lty=1)
 # 
 # setEPS(height=7, width=11)
-# postscript('~/Google Drive/UNR/UNR-Thesis/Figures/validation_tmn_pred-obs.eps')
+# postscript('~/Dropbox/UNR/UNR-Thesis/Figures/validation_tmn_pred-obs.eps')
 # plot(df$date, df$sage, ylim=c(-10, 20),
 #      xlab='Date', ylab='prediction - observation (°C)',
 #      cex.lab=1.25, cex.axis=1.25)

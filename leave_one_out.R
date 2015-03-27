@@ -10,7 +10,7 @@ library(lme4)
 library(ggplot2)
 library(devtools)
 
-setwd('~/Google Drive/UNR/UNR-Thesis/Data/')
+setwd('~/Dropbox/UNR/UNR-Thesis/Data/')
 
 then = Sys.time() # right now is then
 melt_them = TRUE
@@ -18,7 +18,7 @@ merge_them = TRUE
 load_som = TRUE
 load_ra = TRUE
 load_eof = TRUE
-source('~/Google Drive/UNR/UNR-Thesis/Data/Thesis-Code/load_and_melt.R')
+source('~/Dropbox/UNR/UNR-Thesis/Data/Thesis-Code/load_and_melt.R')
 
 m_tmx$jday = as.numeric(format(m_tmx$date, '%j'))
 m_tmx$jday_cos = cos(2*pi/365 * m_tmx$jday)

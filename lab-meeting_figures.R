@@ -1,5 +1,5 @@
 # x11(height=8, width=13)
-png('~/Google Drive/UNR/UNR-Thesis/Figures/elevation_tmx-tmn.png', 
+png('~/Dropbox/UNR/UNR-Thesis/Figures/elevation_tmx-tmn.png', 
     height=8, width=13, units='in', res=300)
 par(mfrow=c(2,1), mar=c(5, 4, 0, 2) + 0.1)
 plot(m_tmx[m_tmx$site == 'D4P03', ]$date, m_tmx[m_tmx$site == 'D4P03', ]$tmx, 
@@ -15,7 +15,7 @@ dev.off()
 
 
 setEPS(height=8, width=12)
-postscript('~/Google Drive/UNR/UNR-Thesis/Figures/elevation_tmx-tmn.eps')
+postscript('~/Dropbox/UNR/UNR-Thesis/Figures/elevation_tmx-tmn.eps')
 par(mfrow=c(2,1), mar=c(5, 4, 0, 2) + 0.1)
 plot(m_tmx[m_tmx$site == 'D4P03', ]$date, m_tmx[m_tmx$site == 'D4P03', ]$tmx, 
      type='l', ylim=c(-30, 40), xlab='Date', ylab='Maximum Temperature (°C)', col='blue', lwd=1.5,
@@ -33,7 +33,7 @@ dev.off()
 start = as.character(unique(m_tmn$site))[1]
 sites = as.character(unique(m_tmn$site))[-1]
 setEPS(height=8, width=12)
-postscript('~/Google Drive/UNR/UNR-Thesis/Figures/all-sites_tmx-tmn.eps')
+postscript('~/Dropbox/UNR/UNR-Thesis/Figures/all-sites_tmx-tmn.eps')
 par(mfrow=c(2,1), mar=c(5, 4, 0, 2) + 0.1)
 plot(m_tmx[m_tmx$site == start, ]$date, m_tmx[m_tmx$site ==start, ]$tmx, 
      type='l', ylim=c(-35, 50), xlab='Date', ylab='Maximum Temperature (°C)', col='blue', lwd=1.5,
@@ -52,17 +52,17 @@ dev.off()
 
 
 png(height=7, width=12.8, res=300, units='in',
-    filename='~/Google Drive/UNR/UNR-Thesis/Figures/preds_tmn_2013-06-25.png')
+    filename='~/Dropbox/UNR/UNR-Thesis/Figures/preds_tmn_2013-06-25.png')
 plot(tmn_stack, 9)
 dev.off()
 
 png(height=7, width=12.8, res=300, units='in',
-    filename='~/Google Drive/UNR/UNR-Thesis/Figures/preds_tmn_2013-12-15.png')
+    filename='~/Dropbox/UNR/UNR-Thesis/Figures/preds_tmn_2013-12-15.png')
 plot(tmn_stack, 182)
 dev.off()
 
 setEPS()
-postscript('~/Google Drive/UNR/UNR-Thesis/Figures/preds_lapse-tmn_2013-06-25.eps')
+postscript('~/Dropbox/UNR/UNR-Thesis/Figures/preds_lapse-tmn_2013-06-25.eps')
 with(m_tmn[m_tmn$date == as.Date('2013-06-25'),], {
   plot(elev, tmn, xlab='elevation (km)', ylab='minimum temperature (°C)',
        cex.axis=1.25, cex.lab=1.25)
@@ -74,7 +74,7 @@ dev.off()
 
 
 setEPS()
-postscript('~/Google Drive/UNR/UNR-Thesis/Figures/preds_lapse-tmn_2013-12-15.eps')
+postscript('~/Dropbox/UNR/UNR-Thesis/Figures/preds_lapse-tmn_2013-12-15.eps')
 with(m_tmn[m_tmn$date == as.Date('2013-12-15'),], {
   plot(elev, tmn, xlab='elevation (km)', ylab='minimum temperature (°C)',
        cex.axis=1.25, cex.lab=1.25)
@@ -86,7 +86,7 @@ dev.off()
 
 
 setEPS()
-postscript('~/Google Drive/UNR/UNR-Thesis/Figures/preds_lapse-tmx_2013-06-25.eps')
+postscript('~/Dropbox/UNR/UNR-Thesis/Figures/preds_lapse-tmx_2013-06-25.eps')
 with(m_tmx[m_tmx$date == as.Date('2013-06-25'),], {
   plot(elev, tmx, xlab='elevation (km)', ylab='maximum temperature (°C)',
        main='2013-06-25', cex.axis=1.25, cex.lab=1.25)
@@ -97,7 +97,7 @@ with(m_tmx[m_tmx$date == as.Date('2013-06-25'),], {
 dev.off()
 
 setEPS()
-postscript('~/Google Drive/UNR/UNR-Thesis/Figures/preds_lapse-tmx_2013-12-15.eps')
+postscript('~/Dropbox/UNR/UNR-Thesis/Figures/preds_lapse-tmx_2013-12-15.eps')
 with(m_tmx[m_tmx$date == as.Date('2013-12-15'),], {
   plot(elev, tmx, xlab='elevation (km)', ylab='maximum temperature (°C)',
        cex.axis=1.25, cex.lab=1.25)
@@ -109,18 +109,18 @@ dev.off()
 
 
 png(height=7, width=12.8, res=300, units='in',
-    filename='~/Google Drive/UNR/UNR-Thesis/Figures/preds_tmx_2013-06-25.png')
+    filename='~/Dropbox/UNR/UNR-Thesis/Figures/preds_tmx_2013-06-25.png')
 plot(tmx_stack, which(names(tmx_stack) == 'X2013.06.25_tmx'))
 dev.off()
 
 png(height=7, width=12.8, res=300, units='in',
-    filename='~/Google Drive/UNR/UNR-Thesis/Figures/preds_tmx_2013-12-15.png')
+    filename='~/Dropbox/UNR/UNR-Thesis/Figures/preds_tmx_2013-12-15.png')
 plot(tmx_stack, which(names(tmx_stack) == 'X2013.12.15_tmx'))
 dev.off()
 
 
 setEPS(height=7, width=10)
-postscript('~/Google Drive/UNR/UNR-Thesis/Figures/validation_tmx_pred-obs')
+postscript('~/Dropbox/UNR/UNR-Thesis/Figures/validation_tmx_pred-obs')
 plot(df$date, df$sage, ylim=c(-10, 20),
      xlab='Date', ylab='prediction - observation (°C)')
 points(df$date, df$pj, col='orange')

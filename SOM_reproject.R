@@ -15,7 +15,7 @@ library(kohonen)
 plot_the_maps = TRUE
 
 
-setwd('~/Google Drive/UNR/UNR-Thesis/Data/')
+setwd('~/Dropbox/UNR/UNR-Thesis/Data/')
 
 #### Set up the extent I want to work in
 e = extent(-180, -75, 15, 90)
@@ -84,7 +84,7 @@ codes = stack(l)
 
 #### If plot_the_maps flag is on, plot the maps using the Plot_SOM_Rasters script
 if(plot_the_maps){
-  source('/home/vitale232/Google Drive/UNR/UNR-Thesis/Data/Thesis-Code/Plot_SOM_Rasters.R')
+  source('/home/vitale232/Dropbox/UNR/UNR-Thesis/Data/Thesis-Code/Plot_SOM_Rasters.R')
 }
 
 #### Plot the training process

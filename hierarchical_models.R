@@ -17,7 +17,7 @@ merge_them = TRUE
 load_som = TRUE
 load_ra = TRUE
 load_eof = TRUE
-source('~/Google Drive/UNR/UNR-Thesis/Data/Thesis-Code/load_and_melt.R')
+source('~/Dropbox/UNR/UNR-Thesis/Data/Thesis-Code/load_and_melt.R')
 
 ## Fit a linear mixed effect model of intercept allowing intercept
 ## to vary by site.
@@ -107,7 +107,7 @@ save.image(file=file.path(getwd(), 'Modeling_R-Images',
 
 
 # x11(width=17, height=10.3)
-png(filename='/home/vitale232/Google Drive/UNR/UNR-Thesis/Figures/lapse-rates_tmn.png',
+png(filename='/home/vitale232/Dropbox/UNR/UNR-Thesis/Figures/lapse-rates_tmn.png',
     width=17.5, height=10.3, units='in', res=200)
 m_tmn$jday = paste(strftime(m_tmn$date, '%y'), strftime(m_tmn$date, '%j'), sep='-')
 brks = c(2000, 2500, 3000, 3500)

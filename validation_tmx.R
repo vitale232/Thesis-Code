@@ -8,7 +8,7 @@
 
 library(raster)
 
-setwd('~/Google Drive/UNR/UNR-Thesis/Data/')
+setwd('~/Dropbox/UNR/UNR-Thesis/Data/')
 
 #### Define functions
 mae = function(preds, obs, ...){
@@ -45,7 +45,7 @@ proj4string(stations) = CRS('+proj=longlat +datum=WGS84 +ellps=WGS84 +towgs84=0,
 stations = spTransform(stations, CRS(projection(tmx_stack)))
 
 #### Read in the road shapefile for mapping
-roads = readOGR(dsn='/home/vitale232/Google Drive/UNR/UNR-Thesis/SiteMap', layer='DirtRoads')
+roads = readOGR(dsn='/home/vitale232/Dropbox/UNR/UNR-Thesis/SiteMap', layer='DirtRoads')
 
 #### Extract the predicted tmx values
 preds = extract(tmx_stack, stations)

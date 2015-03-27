@@ -32,7 +32,7 @@ if(!(exists(as.character(substitute(load_eof))))){
   load_wind = TRUE
 }
 #### Read in the datasets
-setwd('~/Google Drive/UNR/UNR-Thesis/Data/')
+setwd('~/Dropbox/UNR/UNR-Thesis/Data/')
 
 ## 2m
 m_tmx = read.csv('./Aggregated_Data/m-tmx.csv')

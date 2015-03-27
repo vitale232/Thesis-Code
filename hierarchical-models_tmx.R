@@ -16,7 +16,7 @@ library(spdep)
 library(devtools)
 # install_github("pbreheny/visreg")
 
-setwd('~/Google Drive/UNR/UNR-Thesis/Data/')
+setwd('~/Dropbox/UNR/UNR-Thesis/Data/')
 
 melt_them = TRUE
 merge_them = TRUE
@@ -24,10 +24,10 @@ load_som = TRUE
 load_ra = TRUE
 load_eof = TRUE
 load_wind = TRUE
-source('~/Google Drive/UNR/UNR-Thesis/Data/Thesis-Code/load_and_melt.R')
+source('~/Dropbox/UNR/UNR-Thesis/Data/Thesis-Code/load_and_melt.R')
 
 #### Calculate Tmx lapse rates
-source('~/Google Drive/UNR/UNR-Thesis/Data/Thesis-Code/lapse_function.R')
+source('~/Dropbox/UNR/UNR-Thesis/Data/Thesis-Code/lapse_function.R')
 elev_for_lapse = snake$elev/1000
 tmx_for_lapse = read.csv('./Aggregated_Data/m-tmx.csv')
 m_tmx_lapse = lapse(tmx_for_lapse, elev_for_lapse)

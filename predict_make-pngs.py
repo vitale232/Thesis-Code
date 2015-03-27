@@ -37,4 +37,4 @@ def main(workspace):
     print('\n\nFINISHED!')
 
 if __name__ == '__main__':
-    main('/home/vitale232/Google Drive/UNR/UNR-Thesis/Data/Temperature-Maps/Tmx/tmx_mod')
+    main('/home/vitale232/Dropbox/UNR/UNR-Thesis/Data/Temperature-Maps/Tmx/tmx_mod')

@@ -31,7 +31,7 @@ def main(filename, workspace=os.getcwd()):
 
 
 if __name__ == '__main__':
-    workspace = '/home/vitale232/Google Drive/UNR/UNR-Thesis/Data/Aggregated_Data'
+    workspace = '/home/vitale232/Dropbox/UNR/UNR-Thesis/Data/Aggregated_Data'
     filenames = []
     for item in os.listdir(workspace):
         if item.endswith('.csv'):

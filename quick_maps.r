@@ -3,7 +3,7 @@
 library(raster)
 library(rgdal)
 
-setwd('~/Google Drive/UNR/UNR-Thesis/Data/')
+setwd('~/Dropbox/UNR/UNR-Thesis/Data/')
 
 tci = raster('./GIS-Data/TCI_Whole-Range_UTM.tif')
 hli = raster('./GIS-Data/hli_utm.tif')

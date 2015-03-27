@@ -17,7 +17,7 @@ library(raster)
 library(rgdal)
 
 #### Read in the files
-setwd('~/Google Drive/UNR/UNR-Thesis/Data/')
+setwd('~/Dropbox/UNR/UNR-Thesis/Data/')
 
 lf <- list.files('./GIS-Data/DEM/', pattern = '.img$',
                  full.names = TRUE)

@@ -194,9 +194,9 @@ def main(mFilepath, xFilepath, yFilepath, window, windowFlag=True):
 #     print(lat)
 
 if __name__ == '__main__':
-    main('/home/vitale232/Google Drive/UNR/UNR-Thesis/Data/Reanalysis/SLP_Anoms/anoms_matrix_equi-dist.csv',
-        '/home/vitale232/Google Drive/UNR/UNR-Thesis/Data/Reanalysis/SLP_Anoms/lon-vec.csv',
-        '/home/vitale232/Google Drive/UNR/UNR-Thesis/Data/Reanalysis/SLP_Anoms/lat-vec.csv',
+    main('/home/vitale232/Dropbox/UNR/UNR-Thesis/Data/Reanalysis/SLP_Anoms/anoms_matrix_equi-dist.csv',
+        '/home/vitale232/Dropbox/UNR/UNR-Thesis/Data/Reanalysis/SLP_Anoms/lon-vec.csv',
+        '/home/vitale232/Dropbox/UNR/UNR-Thesis/Data/Reanalysis/SLP_Anoms/lat-vec.csv',
         window=30, windowFlag=False)
-    # main('/home/vitale232/Google Drive/UNR/UNR-Thesis/Data/Reanalysis/SLP')
-    # main2('/home/vitale232/Google Drive/UNR/UNR-Thesis/Data/Reanalysis/slp.nc')
+    # main('/home/vitale232/Dropbox/UNR/UNR-Thesis/Data/Reanalysis/SLP')
+    # main2('/home/vitale232/Dropbox/UNR/UNR-Thesis/Data/Reanalysis/slp.nc')

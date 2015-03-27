@@ -4,7 +4,7 @@ library(reshape2)
 library(ggplot2)
 library(plyr)
 
-source('~/Google Drive/UNR/UNR-Thesis/Data/Thesis-Code/load_and_melt.R')
+source('~/Dropbox/UNR/UNR-Thesis/Data/Thesis-Code/load_and_melt.R')
 
 m_tmn$month = factor(format(m_tmn$date, '%b'),
                      levels=c('Jan', 'Feb' ,'Mar',
@@ -51,7 +51,7 @@ pp = pp + theme_gray(base_size=20) +
   ylab(expression(paste("Residual Minimum Temperature (", degree, "C)")))
 print(pp)
 
-ggsave('~/Google Drive/UNR/UNR-Thesis/Manuscript/JAMC/figure05_tci-elev-resid.pdf')
+ggsave('~/Dropbox/UNR/UNR-Thesis/Manuscript/JAMC/figure05_tci-elev-resid.pdf')
 # pp
 # dev.off()
 
@@ -78,8 +78,8 @@ AIC(lm(resid ~ tci, resid_month),
 
 
 #### TMX ####
-# s = stack(list.files('~/Google Drive/UNR/UNR-Thesis/Data/GIS-Data/Irradiance/new_name/', full.names=T))
-# r = raster('/home/vitale232/Google Drive/UNR/UNR-Thesis/Data/GIS-Data/NLCD/nlcd_utm.tif')
+# s = stack(list.files('~/Dropbox/UNR/UNR-Thesis/Data/GIS-Data/Irradiance/new_name/', full.names=T))
+# r = raster('/home/vitale232/Dropbox/UNR/UNR-Thesis/Data/GIS-Data/NLCD/nlcd_utm.tif')
 # s = crop(s, r)
 # rad = sum(s)
 # writeRaster(rad, './GIS-Data/Irradiance/annual_rad.grd')

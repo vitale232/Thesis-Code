@@ -43,7 +43,7 @@ def plot_4x4(array1, array2, array3, array4):
     plt.show()
 
 if __name__ == '__main__':
-    os.chdir('/home/vitale232/Google Drive/UNR/UNR-Thesis/Data/Reanalysis/SLP')
+    os.chdir('/home/vitale232/Dropbox/UNR/UNR-Thesis/Data/Reanalysis/SLP')
     file_list = sorted(list_files(os.getcwd()))
     print file_list
     slp = open_slp_as_array(file_list[20])

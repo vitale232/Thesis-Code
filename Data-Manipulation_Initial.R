@@ -15,7 +15,7 @@ library(data.table)
 # tries to compensate for daylight savings
 Sys.setenv( TZ="GMT+8" )
 
-setwd("~/Google Drive/UNR/UNR-Thesis/Data/")
+setwd("~/Dropbox/UNR/UNR-Thesis/Data/")
 
 ## read in the site specific data
 snake <- read.csv('./Site-Data/snake2.csv', header = TRUE)

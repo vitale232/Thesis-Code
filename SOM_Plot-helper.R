@@ -2,9 +2,9 @@ library(fields)
 library(raster)
 library(rgdal)
 
-states = readOGR(dsn='/home/vitale232/Google Drive/UNR/UNR-Thesis/Data/GIS-Data/states_21basic',
+states = readOGR(dsn='/home/vitale232/Dropbox/UNR/UNR-Thesis/Data/GIS-Data/states_21basic',
                  layer='states')
-canada = readOGR(dsn='/home/vitale232/Google Drive/UNR/UNR-Thesis/Data/GIS-Data/Canada',
+canada = readOGR(dsn='/home/vitale232/Dropbox/UNR/UNR-Thesis/Data/GIS-Data/Canada',
                  layer='Canada')
 
 states = spTransform(states, CRS(projection(codes)))

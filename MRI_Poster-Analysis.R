@@ -10,7 +10,7 @@
 library(raster)
 library(rgdal)
 
-setwd('~/Google Drive/UNR/UNR-Thesis/Data/')
+setwd('~/Dropbox/UNR/UNR-Thesis/Data/')
 
 # #### Read in and merge reanalysis data
 # ra13 = read.csv('./Reanalysis/Reanalysis-Data_2013.csv')

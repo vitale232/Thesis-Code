@@ -24,7 +24,7 @@ for(index in 1:2){
   
 years_to_get = 2013:2014
 
-setwd(paste0("~/Google Drive/UNR/UNR-Thesis/Data/Reanalysis/", years_to_get[index]))
+setwd(paste0("~/Dropbox/UNR/UNR-Thesis/Data/Reanalysis/", years_to_get[index]))
 
 # list the netCDF files
 lf <- list.files(pattern = ".nc$")
@@ -114,7 +114,7 @@ df <- data.frame("date" = d,
                  "uwnd" =   signif(t(el[[6]]), 4),
                  "vwnd" =   signif(t(el[[7]]), 4))
 
-grive <- "~/Google Drive/UNR/UNR-Thesis/Data/Reanalysis/"
+grive <- "~/Dropbox/UNR/UNR-Thesis/Data/Reanalysis/"
 
 write.csv(df, file = file_names[index], row.names = FALSE)
 write.csv(df, file = file.path(grive, file_names[index]), row.names = FALSE)

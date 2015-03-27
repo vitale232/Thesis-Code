@@ -8,7 +8,7 @@
 
 library(raster)
 
-setwd('~/Google Drive/UNR/UNR-Thesis/Data/')
+setwd('~/Dropbox/UNR/UNR-Thesis/Data/')
 
 snake = read.csv('./Site-Data/snake3.csv')
 coordinates(snake) = ~x_utm+y_utm

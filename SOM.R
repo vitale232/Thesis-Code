@@ -10,7 +10,7 @@ library(raster)
 library(ncdf4)
 library(kohonen)
 
-setwd('~/Google Drive/UNR/UNR-Thesis/Data/')
+setwd('~/Dropbox/UNR/UNR-Thesis/Data/')
 
 #### Set up the extent I want to work in
 e = extent(-145, -100, 25, 60)

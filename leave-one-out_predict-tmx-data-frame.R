@@ -18,7 +18,7 @@ library(ggplot2)
 library(devtools)
 library(reshape2)
 
-setwd('~/Google Drive/UNR/UNR-Thesis/Data/')
+setwd('~/Dropbox/UNR/UNR-Thesis/Data/')
 
 then = Sys.time() # right now is then
 predict = FALSE
@@ -28,7 +28,7 @@ merge_them = TRUE
 load_som = TRUE
 load_ra = TRUE
 load_eof = TRUE
-source('~/Google Drive/UNR/UNR-Thesis/Data/Thesis-Code/load_and_melt.R')
+source('~/Dropbox/UNR/UNR-Thesis/Data/Thesis-Code/load_and_melt.R')
 
 m_tmx$jday = as.numeric(format(m_tmx$date, '%j'))
 m_tmx$jday_cos = cos(2*pi/365 * m_tmx$jday)
@@ -172,7 +172,7 @@ histsTmx = ggplot(data=bias_tmx_melt) +
   theme(axis.text.x=element_text(color='black'),
         axis.text.y=element_text(color='black'))
 print(histsTmx)
-ggsave('~/Google Drive/UNR/UNR-Thesis/Figures/bias_tmx-leave_one_out.pdf',
+ggsave('~/Dropbox/UNR/UNR-Thesis/Figures/bias_tmx-leave_one_out.pdf',
        width=10, height=7)
 
 # mse_tmx = apply()

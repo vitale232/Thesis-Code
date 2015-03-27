@@ -15,7 +15,7 @@ library(kohonen)
 
 plot_the_maps = TRUE
 
-setwd('~/Google Drive/UNR/UNR-Thesis/Data/')
+setwd('~/Dropbox/UNR/UNR-Thesis/Data/')
 
 anoms = brick('./Reanalysis/SLP_Anoms/slp_anoms.grd')
 
@@ -42,7 +42,7 @@ if(plot_the_maps){
   contours = TRUE
   equidistant_projection = TRUE
   save_as_png = TRUE
-  png_filename = '~/Google Drive/UNR/UNR-Thesis/Figures/SOM_7x5_Codes.png'
+  png_filename = '~/Dropbox/UNR/UNR-Thesis/Figures/SOM_7x5_Codes.png'
   layout(matrix(c(1:35, rep(36, 7)), ncol=7, byrow=T))
   layout.show(36)
   brks <- seq(-34, 34, by = 1)
@@ -51,7 +51,7 @@ if(plot_the_maps){
   ticks <- seq(-34, 34, by = 2)
   z = c(-34, 34)
   codes = codes_7x5
-  source('/home/vitale232/Google Drive/UNR/UNR-Thesis/Data/Thesis-Code/SOM_Plot-helper.R')
+  source('/home/vitale232/Dropbox/UNR/UNR-Thesis/Data/Thesis-Code/SOM_Plot-helper.R')
 }
 
 #### Plot the training process
@@ -99,7 +99,7 @@ if(plot_the_maps){
   contours = TRUE
   equidistant_projection = TRUE
   save_as_png = TRUE
-  png_filename = '~/Google Drive/UNR/UNR-Thesis/Figures/SOM_5x5_Codes.png'
+  png_filename = '~/Dropbox/UNR/UNR-Thesis/Figures/SOM_5x5_Codes.png'
   if(save_as_png){
     png(png_filename, width=15, height=10, unit='in', res=300)}else{
       x11(width=15, height=10)
@@ -112,7 +112,7 @@ if(plot_the_maps){
   ticks <- seq(-32, 32, by = 2)
   z = c(-32, 32)
   codes = codes_5x5
-  source('/home/vitale232/Google Drive/UNR/UNR-Thesis/Data/Thesis-Code/SOM_Plot-helper.R')
+  source('/home/vitale232/Dropbox/UNR/UNR-Thesis/Data/Thesis-Code/SOM_Plot-helper.R')
 }
 
 #### Plot the training process
@@ -144,7 +144,7 @@ if(plot_the_maps){
   contours = TRUE
   equidistant_projection = TRUE
   save_as_png = TRUE
-  png_filename = '~/Google Drive/UNR/UNR-Thesis/Figures/SOM_4x4_Codes.png'
+  png_filename = '~/Dropbox/UNR/UNR-Thesis/Figures/SOM_4x4_Codes.png'
   if(save_as_png){
     png(png_filename, width=15, height=10, unit='in', res=300)}else{
       x11(width=15, height=10)
@@ -157,7 +157,7 @@ if(plot_the_maps){
   ticks <- seq(-30, 30, by = 2)
   z = c(-30, 30)
   codes = codes_4x4
-  source('/home/vitale232/Google Drive/UNR/UNR-Thesis/Data/Thesis-Code/SOM_Plot-helper.R')
+  source('/home/vitale232/Dropbox/UNR/UNR-Thesis/Data/Thesis-Code/SOM_Plot-helper.R')
 }
 
 #### Plot the training process

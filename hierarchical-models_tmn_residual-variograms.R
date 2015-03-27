@@ -9,7 +9,7 @@
 library(spacetime)
 library(gstat)
 
-setwd('~/Google Drive/UNR/UNR-Thesis/Data/')
+setwd('~/Dropbox/UNR/UNR-Thesis/Data/')
 
 # source('./Thesis-Code/hierarchical-models_tmn.R')
 

@@ -1,7 +1,7 @@
-# png('~/Google Drive/UNR/UNR-Thesis/Figures/lapse-by-SOM.png', 
+# png('~/Dropbox/UNR/UNR-Thesis/Figures/lapse-by-SOM.png', 
 #     height=10.25, width=17, units='in', res=300)
 
-source('/home/vitale232/Google Drive/UNR/UNR-Thesis/Data/Thesis-Code/Exploratory_Analysis.R')
+source('/home/vitale232/Dropbox/UNR/UNR-Thesis/Data/Thesis-Code/Exploratory_Analysis.R')
 
 lapse = data.frame('date'=m_tmx$date, m_tmx_lapse,
                    'unit'=mapped_7x5$unit,

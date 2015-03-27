@@ -16,14 +16,14 @@ library(spdep)
 library(devtools)
 # install_github("pbreheny/visreg")
 
-setwd('~/Google Drive/UNR/UNR-Thesis/Data/')
+setwd('~/Dropbox/UNR/UNR-Thesis/Data/')
 
 melt_them = TRUE
 merge_them = TRUE
 load_som = TRUE
 load_ra = TRUE
 load_eof = TRUE
-source('~/Google Drive/UNR/UNR-Thesis/Data/Thesis-Code/load_and_melt.R')
+source('~/Dropbox/UNR/UNR-Thesis/Data/Thesis-Code/load_and_melt.R')
 
 m_tmn$jday = as.numeric(format(m_tmn$date, '%j'))
 m_tmn$jday_cos = cos(2*pi/365 * m_tmn$jday)
