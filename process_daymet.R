@@ -29,5 +29,10 @@ dec_files = list.files('~/Dropbox/UNR/UNR-Thesis/Data/Temperature-Maps/Tmn/tmn_m
 dec_stack = stack(dec_files)
 dec = mean(dec_stack)
 
-writeRaster(dec, '/home/vitale232/Dropbox/UNR/UNR-Thesis/Data/Daymet/predicted_mean-dec-tmn.tif')
-writeRaster(mean_tmn, '/home/vitale232/Dropbox/UNR/UNR-Thesis/Data/Daymet/daymet_mean-dec-tmn.tif')
+## reproject daymet to UTM
+mean_tmn = projectRaster(mean_tmn, crs=projection(dec))
+
+writeRaster(dec, '/home/vitale232/Dropbox/UNR/UNR-Thesis/Data/Daymet/predicted_mean-dec-tmn.tif',
+            overwrite=TRUE)
+writeRaster(mean_tmn, '/home/vitale232/Dropbox/UNR/UNR-Thesis/Data/Daymet/daymet_mean-dec-tmn.tif',
+            overwrite=TRUE)
