@@ -43,5 +43,5 @@ stations[
 stations = as.data.frame(stations)[1:4, ]
 
 stations$lab = c('Sagebrush', 'PJ', 'Montane', 'Subalpine')
-
-stations = rbind(stations, stations)
+# 
+# stations = rbind(stations, stations)
