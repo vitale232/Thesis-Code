@@ -44,7 +44,7 @@ tmn_mod = lmer(formula(tmn~irrad+(elev+I(elev^2))*PC4+tair+tci+cc_nlcd*(elev+I(e
 
 #------------------------------------------------------------------#
 #### TMX MODELS ####
-source('~/Dropbox/UNR/UNR-Thesis/Data/Thesis-Code/load_and_melt.R')
+# source('~/Dropbox/UNR/UNR-Thesis/Data/Thesis-Code/load_and_melt.R')
 
 m_tmx$jday = as.numeric(format(m_tmx$date, '%j'))
 m_tmx$jday_cos = cos(2*pi/365 * m_tmx$jday)
