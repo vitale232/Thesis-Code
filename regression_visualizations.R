@@ -68,19 +68,26 @@ par(mar = c(5, 6, 4, 2) + 0.1)
 visreg(tmn_mod, 'elev', cex.lab=3.25, axes=FALSE, 
        line=list(lwd=7), points=list(cex=1.1))
 visreg(tmn_mod, 'tci', cex.lab=3.25, axes=FALSE, 
-       line=list(lwd=7), points=list(cex=1.1))
+       line=list(lwd=7), points=list(cex=1.1),
+       xlab='TCI', ylab='f(TCI)')
 visreg(tmn_mod, 'gis.slope', cex.lab=3.25, axes=FALSE, 
-       line=list(lwd=7), points=list(cex=1.1))
+       line=list(lwd=7), points=list(cex=1.1),
+       xlab='Slope (degrees)', ylab='f(Slope)')
 
 ## Interactions tmn
 visreg(tmn_mod, 'elev', cex.lab=3.25, axes=FALSE, by='PC4',
-       line=list(lwd=7), points=list(cex=1.1))
+       line=list(lwd=7), points=list(cex=1.75),
+       par.settings=list(fontsize=list(text=26)),
+       xlab='Elevation', ylab='f(elevation)')
 visreg(tmn_mod, 'elev', cex.lab=3.25, axes=FALSE, by='cc_nlcd',
-       line=list(lwd=7), points=list(cex=1.1))
+       line=list(lwd=7), points=list(cex=1.1),
+       par.settings=list(fontsize=list(text=26)),
+       xlab='Elevation', ylab='f(elevation)')
 
 ## Synoptic tmn
 visreg(tmn_mod, 'tair', cex.lab=3.25, axes=FALSE, 
-       line=list(lwd=7), points=list(cex=1.1))
+       line=list(lwd=7), points=list(cex=1.1),
+       xlab='Tair', ylab='f(tair)')
 visreg(tmn_mod, 'PC4', cex.lab=3.25, axes=FALSE, 
        line=list(lwd=7), points=list(cex=1.1))
 
@@ -106,9 +113,11 @@ print(sincos)
 
 ## Topo tmx
 visreg(tmx_mod, 'elev', cex.lab=3.25, axes=FALSE, 
-       line=list(lwd=7), points=list(cex=1.1))
+       line=list(lwd=7), points=list(cex=1.1),
+       xlab='Elevation', ylab='f(elev)')
 visreg(tmx_mod, 'irrad', cex.lab=3.25, axes=FALSE, 
-       line=list(lwd=7), points=list(cex=1.1))
+       line=list(lwd=7), points=list(cex=1.1),
+       xlab='Insolation', ylab='f(insolation)')
 
 ## Synoptic tmx
 visreg(tmx_mod, 'tair', cex.lab=3.25, axes=FALSE, 
@@ -119,7 +128,11 @@ visreg(tmx_mod, 'PC4', cex.lab=3.25, axes=FALSE,
 ## interaction tmx
 visreg(tmx_mod, 'tci', cex.lab=3.25, axes=FALSE, by='jday',
        line=list(lwd=7), points=list(cex=1.1),
-       breaks=c(1, 79, 171, 263))
+       breaks=c(1, 79, 171, 263),
+       par.settings=list(fontsize=list(text=26)),
+       xlab='TCI', ylab='f(tci)')
 visreg(tmx_mod, 'elev', cex.lab=3.25, axes=FALSE, by='jday',
        line=list(lwd=7), points=list(cex=1.1),
-       breaks=c(1, 79, 171, 263))
+       breaks=c(1, 79, 171, 263),
+       par.settings=list(fontsize=list(text=26)),
+       xlab='Elevation', ylab='f(elev)')
